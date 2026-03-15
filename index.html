@@ -4,56 +4,161 @@
   <meta charset="utf-8">
   <title>Liam Patell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        :root {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --link-color: #90caf9;
-            --selection-bg: #3d4451;
-            --border-color: #444;
-            --footnote-button-color: #e0e0e0;
-        } 
-        body {
-            line-height: 1.5;
-            max-width: 70ch;
-            padding: 16px;
-            margin: 0 auto;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-        }
-        ::selection {
-            background: var(--selection-bg);
-            color: inherit;
-        }
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .content {
-            margin-bottom: 2em;
-        }
-        p {
-            margin: 1em 0;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 2em;
-            margin: 1em 0;
-        }
-        li {
-            margin: 0.5em 0;
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scrollbar-width: none;
+    }
+    html::-webkit-scrollbar {
+      display: none;
+    }
+
+    body {
+      font-family: 'Lora', Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+      background: #FAF9F7;
+      color: #2C2C2C;
+      line-height: 1.8;
+      font-size: 19px;
+      -webkit-font-smoothing: antialiased;
+      opacity: 0;
+      animation: arrive 800ms ease forwards;
+    }
+
+    @keyframes arrive {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    ::selection {
+      background: #3D4F6F;
+      color: #FAF9F7;
+    }
+
+    .top-space {
+      height: 35vh;
+    }
+
+    .container {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 0 28px 120px;
+    }
+
+    .site-header {
+      text-align: center;
+      padding-bottom: 48px;
+    }
+
+    .article-title {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      color: #2C2C2C;
+    }
+
+    .article-author {
+      font-size: 15px;
+      font-weight: 400;
+      color: #6B6359;
+      font-variant: small-caps;
+      letter-spacing: 0.04em;
+    }
+
+    .rule {
+      border: none;
+      border-top: 1px solid #D4D0CB;
+      margin-bottom: 48px;
+    }
+
+    p {
+      margin-bottom: 2em;
+      color: #2C2C2C;
+    }
+
+    a {
+      text-decoration: underline;
+      text-decoration-color: #3D4F6F;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      text-decoration-skip-ink: auto;
+      color: #2C2C2C;
+    }
+
+    .contact {
+      color: #6B6359;
+      font-size: 16px;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 500;
+      margin-top: 72px;
+      margin-bottom: 24px;
+      color: #2C2C2C;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2em;
+    }
+
+    li {
+      margin-bottom: 0.75em;
+      color: #6B6359;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .footer {
+      margin-top: 120px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 12px;
+      color: #9E978E;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 600px) {
+      body { font-size: 17px; }
+      .top-space { height: 25vh; }
+      .container { padding: 0 20px 80px; }
+      .article-title { font-size: 24px; }
+      .rule { margin-bottom: 40px; }
+      li { font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>L. C. R. P.</h1>
-  <div class="content">
-  <p>I am a Research Scholar at GovAI working on US AI policy. Before that, I did my <a href="https://drive.google.com/file/d/1jOxA71irDVt5pfVIjbbZz8VQ1Qkzu-An/view?usp=share_link">BPhil in Philosophy</a> and BA at Oxford.</p>
-  <p>lcrpatell [at] gmail [dot] com</p>
-    <h1>Some Favorite Text</h1>
+
+  <div class="top-space"></div>
+
+  <div class="container">
+
+    <div class="site-header">
+      <div class="article-title">L. C. R. P.</div>
+    </div>
+
+    <hr class="rule">
+
+    <p>I am a Research Scholar at GovAI working on US AI policy. Before that, I did my <a href="https://drive.google.com/file/d/1jOxA71irDVt5pfVIjbbZz8VQ1Qkzu-An/view?usp=share_link">BPhil in Philosophy</a> and BA at Oxford.</p>
+
+    <p class="contact">lcrpatell [at] gmail [dot] com</p>
+
+    <h2>Some Favorite Text</h2>
     <ul>
       <li>Derek Parfit -- On What Matters (Volume Two, Chapter 23)</li>
       <li>Rudolf Carnap -- Der logische Aufbau der Welt</li>
@@ -70,6 +175,12 @@
       <li>Ralph Waldo Emerson -- The American Scholar</li>
       <li>Ralph Waldo Emerson -- Self-Reliance</li>
     </ul>
+
+    <div class="footer">
+      <p>τὸ ἔργον</p>
+    </div>
+
   </div>
+
 </body>
 </html>
